@@ -1,121 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+import React from 'react'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const Footer = ({ nombre, clase }) => {
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+    <footer className="container-fluid py-4 mt-5 footer-newspaper">
+      <div className="container border-top border-bottom border-dark border-3 py-3">
+        <div className="row align-items-center">
+          {/* Lado Izquierdo: Estilo Editorial */}
+          <div className="col-md-4 text-center text-md-start">
+            <h5 className="fw-bold mb-0">CITY SERIES</h5>
+            <p className="small mb-0">Established in 1624</p>
+          </div>
+          <div className="col-md-4 text-center border-md-start border-md-end border-dark">
+            <p className="mb-0 fw-bold text-uppercase">© 2026 {nombre}</p>
+            <p className="small mb-0">{clase}</p>
+          </div>
+          <div className="col-md-4 text-center text-md-end">
+            <p className="small mb-0 italic">"The city that never sleeps"</p>
+            <p className="newspaper-coords m-0">40.7128° N, 74.0060° W</p>
+          </div>
         </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+      </div>
+      <div className="text-center mt-2">
+        <span className="small-caps">Montevideo • Canelones • Uruguay</span>
+      </div>
+    </footer>
+  )
+}
+function App() {
+  return (
+    <div className="App">
+    
+      <div style={{ minHeight: '60vh' }}>
+        <h2 className="text-center mt-5 text-muted">Contenido de la Página</h2>
+      </div>
+      <Footer nombre="Melina Silveira" clase="6to Año - Ánima" />
+    </div>
   )
 }
 
