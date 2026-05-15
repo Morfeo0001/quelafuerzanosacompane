@@ -182,3 +182,73 @@
     border-right-color: var(--border);
   }
 }
+
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ece7df;
+  font-family: 'Cormorant Garamond', serif;
+  color: #1d1d1d;
+}
+
+/* NAVBAR */
+
+.newspaper-navbar {
+  width: 100%;
+  padding: 20px 40px;
+  border-bottom: 3px solid #1d1d1d;
+  background: #f4efe6;
+}
+
+.top-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 2px solid #1d1d1d;
+  padding-bottom: 10px;
+
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.top-line h2 {
+  font-size: 38px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.main-title {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.main-title h1 {
+  font-size: 120px;
+  letter-spacing: 10px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+
+  border-top: 2px solid #1d1d1d;
+  padding-top: 15px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #1d1d1d;
+  font-size: 22px;
+  font-weight: 600;
+}
