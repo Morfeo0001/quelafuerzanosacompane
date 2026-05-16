@@ -14,17 +14,27 @@ import Col from "react-bootstrap/Col";
 function App() {
    return (
       <div className="d-flex flex-column min-vh-100">
-         <Navbar className="bg-body-tertiary">
-            <Container>
-               <Navbar.Brand href="#home">Navbar with text</Navbar.Brand>
-               <Navbar.Toggle />
-               <Navbar.Collapse className="justify-content-end">
-                  <Navbar.Text>
-                     Signed in as: <a href="#login">Mark Otto</a>
-                  </Navbar.Text>
-               </Navbar.Collapse>
-            </Container>
-         </Navbar>
+        <header className="newspaper-navbar">
+
+        <div className="top-line">
+          <span>NEW YORK, US</span>
+
+          <h2>City Series</h2>
+
+          <span>40.7128° N / 74.0060° W</span>
+        </div>
+         <div className="main-title">
+          <h1>NEW YORK</h1>
+        </div>
+
+        <nav className="menu">
+          <a href="#">Inicio</a>
+          <a href="#">Historia</a>
+          <a href="#">Lugares</a>
+          <a href="#">Contacto</a>
+        </nav>
+
+      </header>
          <main className="flex-grow-1">
             <Container>
                <Card className="bg-dark text-white">
