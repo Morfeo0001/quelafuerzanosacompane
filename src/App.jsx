@@ -2,6 +2,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import "./App.css";
 
+// ==========================================
+// SECCIÓN DEL INTEGRANTE 3 (NEITAN) - TARJETAS NY
+// ==========================================
+
 const NewsCard = ({ headline, extract, image, category }) => {
   return (
     <Card className="vintage-card h-100 rounded-0">
@@ -26,7 +30,7 @@ const CardSection = () => {
       extract:
         "Conocido por sus rascacielos imponentes y su cultura vibrante, es el corazón latiente de Manhattan.",
       image:
-        "https://images.unsplash.com/photo-1534430480872-3498384e54e6?auto=format&fit=crop&q=80&w=800",
+        "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fhola-nuevayork.com%2Fwp-content%2Fuploads%2F2022%2F12%2Ftimes-square-de-nuit.jpg&f=1&nofb=1&ipt=eabbe7c0b92dd831e575f6f76111ab71afa67104fd2545371a98e8bc91b3ede2",
       category: "THE HEART OF THE THEATER DISTRICT",
     },
     {
@@ -35,7 +39,7 @@ const CardSection = () => {
       extract:
         "Un escape pacífico de la ciudad. Descubre la serenidad en medio de la metrópolis que nunca duerme.",
       image:
-        "https://images.unsplash.com/photo-1595161048683-11b025345719?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?q=80&w=600",
       category: "A PEACEFUL ESCAPE",
     },
     {
@@ -44,7 +48,7 @@ const CardSection = () => {
       extract:
         "El icónico monumento nacional inaugurado en 1886, símbolo de esperanza e historia en la bahía.",
       image:
-        "https://images.unsplash.com/photo-1602940659805-770d1b3b9911?auto=format&fit=crop&q=80&w=800",
+        "https://images.unsplash.com/photo-1602940659805-770d1b3b9911?q=80&w=600",
       category: "ICONIC NATIONAL MONUMENT",
     },
   ];
@@ -52,15 +56,12 @@ const CardSection = () => {
   return (
     <section className="newspaper-section py-5">
       <Container>
-        {/* Encabezado */}
         <div className="newspaper-header text-center mb-5">
-          <p className="vol-text mb-1">THE CITY THAT NEVER SLEEPS</p>
-          <h2 className="newspaper-main-title">NEW YORK CITY HIGHLIGHTS</h2>
+          <h2 className="newspaper-main-title">HIGHLIGHTS</h2>
           <p className="date-text mt-1 border-bottom border-top border-dark py-1">
             ESTABLISHED IN 1624 • SPECIAL EDITION
           </p>
         </div>
-
         <Row className="g-4">
           {nyDestinations.map((dest) => (
             <Col key={dest.id} xs={12} md={4}>
@@ -81,11 +82,9 @@ const CardSection = () => {
 function App() {
   return (
     <div className="app-wrapper">
-      {/* Acá irá el código de tu compañera (Navbar y Banner principal) */}
-
+      {/* Acá lalaNavbar*/}
       <CardSection />
-
-      {/* Acá irá el código del Footer */}
+      {/* Acá Footer */}
     </div>
   );
 }

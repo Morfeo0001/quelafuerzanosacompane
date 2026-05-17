@@ -32,7 +32,7 @@
 .vintage-card {
   background-color: transparent !important;
   border: none !important;
-  border-right: 1px dashed #666 !important; /* Línea divisoria de columnas */
+  border-right: 1px dashed #666 !important;
 }
 
 @media (max-width: 768px) {
