@@ -1,128 +1,92 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
-import heroImg from "./assets/hero.png";
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Container from "react-bootstrap/Container";
-import Navbar from "react-bootstrap/Navbar";
-import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import "./App.css";
+
+// ==========================================
+// SECCIÓN DEL INTEGRANTE 3 (NEITAN) - TARJETAS NY
+// ==========================================
+
+const NewsCard = ({ headline, extract, image, category }) => {
+  return (
+    <Card className="vintage-card h-100 rounded-0">
+      <div className="news-category">{category}</div>
+      <Card.Img variant="top" src={image} className="vintage-image rounded-0" />
+      <Card.Body className="d-flex flex-column text-center px-4">
+        <Card.Title className="news-headline">{headline}</Card.Title>
+        <Card.Text className="news-extract">{extract}</Card.Text>
+        <Button variant="dark" className="mt-auto vintage-btn rounded-0 w-100">
+          LEER MÁS
+        </Button>
+      </Card.Body>
+    </Card>
+  );
+};
+
+const CardSection = () => {
+  const nyDestinations = [
+    {
+      id: 1,
+      headline: "Times Square",
+      extract:
+        "Conocido por sus rascacielos imponentes y su cultura vibrante, es el corazón latiente de Manhattan.",
+      image:
+        "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fhola-nuevayork.com%2Fwp-content%2Fuploads%2F2022%2F12%2Ftimes-square-de-nuit.jpg&f=1&nofb=1&ipt=eabbe7c0b92dd831e575f6f76111ab71afa67104fd2545371a98e8bc91b3ede2",
+      category: "THE HEART OF THE THEATER DISTRICT",
+    },
+    {
+      id: 2,
+      headline: "Central Park",
+      extract:
+        "Un escape pacífico de la ciudad. Descubre la serenidad en medio de la metrópolis que nunca duerme.",
+      image:
+        "https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?q=80&w=600",
+      category: "A PEACEFUL ESCAPE",
+    },
+    {
+      id: 3,
+      headline: "Statue of Liberty",
+      extract:
+        "El icónico monumento nacional inaugurado en 1886, símbolo de esperanza e historia en la bahía.",
+      image:
+        "https://images.unsplash.com/photo-1602940659805-770d1b3b9911?q=80&w=600",
+      category: "ICONIC NATIONAL MONUMENT",
+    },
+  ];
+
+  return (
+    <section className="newspaper-section py-5">
+      <Container>
+        <div className="newspaper-header text-center mb-5">
+          <h2 className="newspaper-main-title">HIGHLIGHTS</h2>
+          <p className="date-text mt-1 border-bottom border-top border-dark py-1">
+            ESTABLISHED IN 1624 • SPECIAL EDITION
+          </p>
+        </div>
+        <Row className="g-4">
+          {nyDestinations.map((dest) => (
+            <Col key={dest.id} xs={12} md={4}>
+              <NewsCard
+                headline={dest.headline}
+                extract={dest.extract}
+                image={dest.image}
+                category={dest.category}
+              />
+            </Col>
+          ))}
+        </Row>
+      </Container>
+    </section>
+  );
+};
 
 function App() {
-   return (
-      <div className="d-flex flex-column min-vh-100">
-        <header className="newspaper-navbar">
-
-        <div className="top-line">
-          <span>NEW YORK, US</span>
-
-          <h2>City Series</h2>
-
-          <span>40.7128° N / 74.0060° W</span>
-        </div>
-         <div className="main-title">
-          <h1>NEW YORK</h1>
-        </div>
-
-        <nav className="menu">
-          <a href="#">Inicio</a>
-          <a href="#">Historia</a>
-          <a href="#">Lugares</a>
-          <a href="#">Contacto</a>
-        </nav>
-
-      </header>
-         <main className="flex-grow-1">
-            <Container>
-               <Card className="bg-dark text-white">
-                  <Card.Img
-                     src="https://i.pinimg.com/1200x/f2/2b/2f/f22b2fd09e28ccc7d2c7bf8acda4cc78.jpg"
-                     alt="NY"
-                  />
-                  <Card.ImgOverlay>
-                     <Card.Title>Nueva York</Card.Title>
-                     <Card.Text>
-                        Descubre la energía inigualable de Manhattan, desde las
-                        luces brillantes de Times Square hasta la serenidad de
-                        Central Park.
-                     </Card.Text>
-                     <Card.Text>La ciudad que nunca duerme</Card.Text>
-                  </Card.ImgOverlay>
-               </Card>
-            </Container>
-
-            <Container>
-               <Card style={{ width: "18rem" }}>
-                  <Card.Img variant="top" src="holder.js/100px180" />
-                  <Card.Body>
-                     <Card.Title>Card Title</Card.Title>
-                     <Card.Text>
-                        Some quick example text to build on the card title and
-                        make up the bulk of the card's content.
-                     </Card.Text>
-                     <Button variant="primary">Go somewhere</Button>
-                  </Card.Body>
-               </Card>
-            </Container>
-         </main>
-      </div>
-   );
-}
-
-export function Footer() {
-   return (
-      <footer
-         className="py-4 mt-auto"
-         style={{
-            backgroundColor: "#f8f5f0",
-            borderTop: "2px solid #333",
-         }}
-      >
-         <Container>
-            <Row className="align-items-center text-center text-uppercase fw-bold text-dark">
-               <Col md={4} className="border-end border-secondary py-2">
-                  <h5 className="mb-0 fw-bold" style={{ letterSpacing: "2px" }}>
-                     CITY SERIES
-                  </h5>
-                  <small className="fw-normal text-muted">
-                     Established in 1624
-                  </small>
-               </Col>
-
-               <Col md={4} className="py-2">
-                  <div style={{ fontSize: "1rem" }}>© 2026 MELINA SILVEIRA</div>
-                  <small className="fw-normal">6to Año - Ánima</small>
-               </Col>
-
-               <Col md={4} className="border-start border-secondary py-2">
-                  <div
-                     className="fst-italic fw-normal"
-                     style={{ fontSize: "0.85rem" }}
-                  >
-                     "The city that never sleeps"
-                  </div>
-                  <small className="fw-normal text-muted">
-                     40.7128° N, 74.0060° W
-                  </small>
-               </Col>
-            </Row>
-
-            <Row className="mt-3">
-               <Col className="text-center border-top border-secondary pt-2">
-                  <p
-                     className="mb-0"
-                     style={{ fontSize: "0.7rem", letterSpacing: "4px" }}
-                  >
-                     MONTEVIDEO • CANELONESs • URUGUAyy
-                  </p>
-               </Col>
-            </Row>
-         </Container>
-      </footer>
-   );
+  return (
+    <div className="app-wrapper">
+      {/* Acá lalaNavbar*/}
+      <CardSection />
+      {/* Acá Footer */}
+    </div>
+  );
 }
 
 export default App;
