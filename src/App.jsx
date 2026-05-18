@@ -1,4 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+import'./index.css';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Card from 'react-bootstrap/Card';
@@ -26,7 +28,7 @@ function App() {
 
     <Container>
         <Card className="bg-dark text-white">
-      <Card.Img src="https://i.pinimg.com/1200x/f2/2b/2f/f22b2fd09e28ccc7d2c7bf8acda4cc78.jpg" alt="NY" />
+      <Card.Img src="https://i.pinimg.com/1200x/c7/f6/98/c7f69821a3b7e03709fe8f6180250d61.jpg" alt="NY" />
       <Card.ImgOverlay>
         <Card.Title>Nueva York</Card.Title>
         <Card.Text>
