@@ -126,3 +126,55 @@
   color: #1a1a1a !important;
   font-weight: bold;
 }
+
+/* navbar */
+.newspaper-navbar {
+  width: 100%;
+  padding: 10px 40px;
+  border-bottom: 3px solid #1d1d1d;
+  background: #f4efe6;
+}
+
+.top-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-bottom: 1px solid #1d1d1d;
+  padding-bottom: 5px;
+
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.top-line h2 {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.main-title {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.main-title h1 {
+  font-size: 60px;
+  letter-spacing: 5px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+
+  border-top: 1px solid #1d1d1d;
+  padding-top: 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #1d1d1d;
+  font-size: 16px;
+  font-weight: 600;
+}
