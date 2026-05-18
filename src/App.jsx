@@ -1,12 +1,13 @@
-import React from 'react'
-import './App.css'
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
+
 
 const Footer = ({ nombre, clase }) => {
   return (
     <footer className="container-fluid py-4 mt-5 footer-newspaper">
       <div className="container border-top border-bottom border-dark border-3 py-3">
         <div className="row align-items-center">
-          {/* Lado Izquierdo: Estilo Editorial */}
           <div className="col-md-4 text-center text-md-start">
             <h5 className="fw-bold mb-0">CITY SERIES</h5>
             <p className="small mb-0">Established in 1624</p>
@@ -16,7 +17,7 @@ const Footer = ({ nombre, clase }) => {
             <p className="small mb-0">{clase}</p>
           </div>
           <div className="col-md-4 text-center text-md-end">
-            <p className="small mb-0 italic">"The city that never sleeps"</p>
+            <p className="small mb-0 fst-italic">"The city that never sleeps"</p>
             <p className="newspaper-coords m-0">40.7128° N, 74.0060° W</p>
           </div>
         </div>
@@ -25,32 +26,10 @@ const Footer = ({ nombre, clase }) => {
         <span className="small-caps">Montevideo • Canelones • Uruguay</span>
       </div>
     </footer>
-  )
-}
-function App() {
-  return (
-    <div className="App">
-    
-      <div style={{ minHeight: '60vh' }}>
-        <h2 className="text-center mt-5 text-muted">Contenido de la Página</h2>
-      </div>
-      <Footer nombre="Melina Silveira" clase="6to Año - Ánima" />
-    </div>
-  )
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import'./index.css';
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import "./App.css";
+  );
+};
 
-// ==========================================
-// SECCIÓN DEL INTEGRANTE 3 (NEITAN) - TARJETAS NY
-// ==========================================
+
 
 const NewsCard = ({ headline, extract, image, category }) => {
   return (
@@ -68,7 +47,26 @@ const NewsCard = ({ headline, extract, image, category }) => {
   );
 };
 
+const BannerNY = () => {
+  return (
+    <Container className="mt-5">
+      <Card className="banner-vintage bg-dark text-white border-0 rounded-0 overflow-hidden">
+        <Card.Img 
+          src="https://i.pinimg.com/1200x/c7/f6/98/c7f69821a3b7e03709fe8f6180250d61.jpg" 
+          alt="NY" 
+          className="vintage-image w-100" 
+        />
+        <Card.ImgOverlay className="d-flex flex-column justify-content-center text-center bg-dark bg-opacity-25">
+          <Card.Title className="display-4 fw-bold">Nueva York</Card.Title>
+          <Card.Text className="fs-5">La ciudad que nunca duerme</Card.Text>
+        </Card.ImgOverlay>
+      </Card>
+    </Container>
+  );
+};
+
 const CardSection = () => {
+   
   const nyDestinations = [
     {
       id: 1,
@@ -85,7 +83,7 @@ const CardSection = () => {
       extract:
         "Un escape pacífico de la ciudad. Descubre la serenidad en medio de la metrópolis que nunca duerme.",
       image:
-        "https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?q=80&w=600",
+        "https://i.pinimg.com/736x/99/f4/ff/99f4ff74e3a85e274ef4677ddb0e406b.jpg",
       category: "A PEACEFUL ESCAPE",
     },
     {
@@ -94,7 +92,7 @@ const CardSection = () => {
       extract:
         "El icónico monumento nacional inaugurado en 1886, símbolo de esperanza e historia en la bahía.",
       image:
-        "https://images.unsplash.com/photo-1602940659805-770d1b3b9911?q=80&w=600",
+        "https://i.pinimg.com/1200x/4d/eb/a0/4deba0a54d9d207feeeaba12f89948c4.jpg",
       category: "ICONIC NATIONAL MONUMENT",
     },
   ];
@@ -121,47 +119,17 @@ const CardSection = () => {
           ))}
         </Row>
       </Container>
-    </Navbar>
-
-   
-
-    <Container>
-        <Card className="bg-dark text-white">
-      <Card.Img src="https://i.pinimg.com/1200x/c7/f6/98/c7f69821a3b7e03709fe8f6180250d61.jpg" alt="NY" />
-      <Card.ImgOverlay>
-        <Card.Title>Nueva York</Card.Title>
-        <Card.Text>
-          Descubre la energía inigualable de Manhattan, 
-          desde las luces brillantes de Times Square hasta la serenidad de Central Park.
-        </Card.Text>
-        <Card.Text>La ciudad que nunca duerme</Card.Text>
-      </Card.ImgOverlay>
-    </Card>
-    </Container>
-
-   <Container>
-     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
-      <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-    </Card>
-   </Container>
     </section>
   );
 };
 
+
 function App() {
   return (
-    <div className="app-wrapper">
-      {/* Acá lalaNavbar*/}
+    <div className="App">
+      <BannerNY />
       <CardSection />
-      {/* Acá Footer */}
+      <Footer nombre="Melina Silveira" clase="6to Año - Ánima" />
     </div>
   );
 }
