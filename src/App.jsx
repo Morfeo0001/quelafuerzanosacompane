@@ -153,7 +153,7 @@ function App() {
       <NewspaperHeader />
       <BannerNY />
       <CardSection />
-      <Footer nombre="Melina Silveira" clase="6to Año - Ánima" />
+      <Footer nombre="Maite Silveira-Lauren Silva-Diego Silva-Nhauel Velazquez" clase="6to Año - Ánima" />
     </div>
   );
 }
