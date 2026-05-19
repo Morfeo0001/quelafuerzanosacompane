@@ -1,27 +1,27 @@
-/* Estilos para el Footer NO BORRAR */
+/* Footer */
 .footer-newspaper {
-  background-color: #f4f1ea !important; /* Color papel DIARIO */
+  background-color: #f4f1ea !important;
   color: #1a1a1a;
   font-family: 'Times New Roman', Times, serif;
 }
-/* Estilos para el Footer NO BORRAR */
+
 .border-dark {
   border-color: #000 !important;
 }
-/* Estilos para el Footer NO BORRAR */
+
 .italic { font-style: italic; }
-/* Estilos para el Footer NO BORRAR */
+
 .newspaper-coords {
   font-size: 0.7rem;
   letter-spacing: 1px;
 }
-/* Estilos para el Footer NO BORRAR */
+
 .small-caps {
   font-variant: small-caps;
   font-size: 0.8rem;
   letter-spacing: 2px;
 }
-/* Estilos para el Footer NO BORRAR */
+
 @media (min-width: 768px) {
   .border-md-start { border-left: 1px solid #000 !important; }
   .border-md-end { border-right: 1px solid #000 !important; }

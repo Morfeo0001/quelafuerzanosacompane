@@ -3,6 +3,18 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 
 
+function App() {
+  return (
+    <div className="App">
+      <NewspaperHeader />
+      <BannerNY />
+      <CardSection />
+      <Footer nombre="Maite Silveira-Lauren Silva-Diego Silva-Nhauel Velazquez" clase="6to Año - Ánima" />
+    </div>
+  );
+}
+
+
 const NewspaperHeader = () => {
   return (
     <header className="newspaper-navbar">
@@ -17,10 +29,10 @@ const NewspaperHeader = () => {
       </div>
 
       <nav className="menu">
-        <a href="#">Inicio</a>
-        <a href="#">Historia</a>
-        <a href="#">Lugares</a>
-        <a href="#">Contacto</a>
+        <a href="https://es.wikipedia.org/wiki/Nueva_York#Transporte">Transporte</a>
+        <a href="https://es.wikipedia.org/wiki/Nueva_York#Historia">Historia</a>
+        <a href="https://es.wikipedia.org/wiki/Nueva_York#Geograf%C3%ADa">Geografia</a>
+        <a href="https://www.weltrade.com/">Economia</a>
       </nav>
     </header>
   );
@@ -146,16 +158,5 @@ const CardSection = () => {
   );
 };
 
-
-function App() {
-  return (
-    <div className="App">
-      <NewspaperHeader />
-      <BannerNY />
-      <CardSection />
-      <Footer nombre="Maite Silveira-Lauren Silva-Diego Silva-Nhauel Velazquez" clase="6to Año - Ánima" />
-    </div>
-  );
-}
 
 export default App;
