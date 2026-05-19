@@ -58,7 +58,7 @@ const Footer = ({ nombre, clase }) => {
         </div>
       </div>
       <div className="text-center mt-2">
-        <span className="small-caps">Montevideo • Canelones • Uruguay</span>
+        <span className="small-caps">NEW YORK</span>
       </div>
     </footer>
   );
