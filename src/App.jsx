@@ -9,7 +9,7 @@ function App() {
       <NewspaperHeader />
       <BannerNY />
       <CardSection />
-      <Footer nombre="Maite Silveira-Lauren Silva-Diego Silva-Nhauel Velazquez" clase="6to Año - Ánima" />
+      <Footer nombre="Maite Silveira - Lauren Silva - Diego Silva - Nhauel Velazquez" clase="6to Año - Ánima" />
     </div>
   );
 }
@@ -31,8 +31,8 @@ const NewspaperHeader = () => {
       <nav className="menu">
         <a href="https://es.wikipedia.org/wiki/Nueva_York#Transporte">Transporte</a>
         <a href="https://es.wikipedia.org/wiki/Nueva_York#Historia">Historia</a>
-        <a href="https://es.wikipedia.org/wiki/Nueva_York#Geograf%C3%ADa">Geografia</a>
-        <a href="https://www.weltrade.com/">Economia</a>
+        <a href="https://es.wikipedia.org/wiki/Nueva_York#Geograf%C3%ADa">Geografía</a>
+        <a href="https://www.weltrade.com/">Economía</a>
       </nav>
     </header>
   );
