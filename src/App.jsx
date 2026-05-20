@@ -9,7 +9,7 @@ function App() {
       <NewspaperHeader />
       <BannerNY />
       <CardSection />
-      <Footer nombre="Maite Silveira - Lauren Silva - Diego Silva - Nhauel Velazquez" clase="6to Año - Ánima" />
+      <Footer nombre="Maite Silveira - Lauren Silva - Diego Silva - Nhauel Velazquez" clase="2026 - Ánima" />
     </div>
   );
 }
@@ -29,10 +29,10 @@ const NewspaperHeader = () => {
       </div>
 
       <nav className="menu">
-        <a href="https://es.wikipedia.org/wiki/Nueva_York#Transporte">Transporte</a>
-        <a href="https://es.wikipedia.org/wiki/Nueva_York#Historia">Historia</a>
-        <a href="https://es.wikipedia.org/wiki/Nueva_York#Geograf%C3%ADa">Geografia</a>
-        <a href="https://www.weltrade.com/">Economía</a>
+        <a href="https://es.wikipedia.org/wiki/Nueva_York#Transporte">Transport</a>
+        <a href="https://es.wikipedia.org/wiki/Nueva_York#Historia">History</a>
+        <a href="https://es.wikipedia.org/wiki/Nueva_York#Geograf%C3%ADa">Geography</a>
+        <a href="https://www.weltrade.com/">Economy</a>
       </nav>
     </header>
   );
@@ -64,8 +64,8 @@ const BannerNY = () => {
           className="vintage-image w-100" 
         />
         <Card.ImgOverlay className="d-flex flex-column justify-content-center text-center bg-dark bg-opacity-25">
-          <Card.Title className="display-4 fw-bold">Nueva York</Card.Title>
-          <Card.Text className="fs-5">La ciudad que nunca duerme</Card.Text>
+          <Card.Title className="display-4 fw-bold">New York</Card.Title>
+          <Card.Text className="fs-5">The city that never sleeps</Card.Text>
         </Card.ImgOverlay>
       </Card>
     </Container>
@@ -79,7 +79,7 @@ const CardSection = () => {
       id: 1,
       headline: "Times Square",
       extract:
-        "Conocido por sus rascacielos imponentes y su cultura vibrante, es el corazón latiente de Manhattan.",
+        "Known for its imposing skyscrapers and vibrant culture, it is the beating heart of Manhattan.",
       image:
         "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fhola-nuevayork.com%2Fwp-content%2Fuploads%2F2022%2F12%2Ftimes-square-de-nuit.jpg&f=1&nofb=1&ipt=eabbe7c0b92dd831e575f6f76111ab71afa67104fd2545371a98e8bc91b3ede2",
       category: "THE HEART OF THE THEATER DISTRICT",
@@ -88,7 +88,7 @@ const CardSection = () => {
       id: 2,
       headline: "Central Park",
       extract:
-        "Un escape pacífico de la ciudad. Descubre la serenidad en medio de la metrópolis que nunca duerme.",
+        "A peaceful escape from the city. Discover serenity in the midst of the city that never sleeps.",
       image:
         "https://i.pinimg.com/736x/99/f4/ff/99f4ff74e3a85e274ef4677ddb0e406b.jpg",
       category: "A PEACEFUL ESCAPE",
@@ -97,7 +97,7 @@ const CardSection = () => {
       id: 3,
       headline: "Statue of Liberty",
       extract:
-        "El icónico monumento nacional inaugurado en 1886, símbolo de esperanza e historia en la bahía.",
+        "The iconic national monument inaugurated in 1886, a symbol of hope and history in the bay.",
       image:
         "https://i.pinimg.com/1200x/4d/eb/a0/4deba0a54d9d207feeeaba12f89948c4.jpg",
       category: "ICONIC NATIONAL MONUMENT",
@@ -140,7 +140,7 @@ const Footer = ({ nombre, clase }) => {
             <p className="small mb-0">Established in 1624</p>
           </div>
           <div className="col-md-4 text-center border-md-start border-md-end border-dark">
-            <p className="mb-0 fw-bold text-uppercase">© 2026 {nombre}</p>
+            <p className="mb-0 fw-bold text-uppercase">© The world {nombre}</p>
             <p className="small mb-0">{clase}</p>
           </div>
           <div className="col-md-4 text-center text-md-end">

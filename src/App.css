@@ -178,3 +178,16 @@
   font-size: 16px;
   font-weight: 600;
 }
+
+/* Banner */
+
+.vintage-image{
+  filter: grayscale(100%);
+  transition: filter 0.5s;
+}
+.banner-vintage:hover .vintage-image {
+  filter: grayscale(0%);
+}
+.bg-opacity-25 {
+  background-color: rgba(0, 0, 0, 0.4) !important;
+}
