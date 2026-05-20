@@ -31,7 +31,7 @@ const NewspaperHeader = () => {
       <nav className="menu">
         <a href="https://es.wikipedia.org/wiki/Nueva_York#Transporte">Transporte</a>
         <a href="https://es.wikipedia.org/wiki/Nueva_York#Historia">Historia</a>
-        <a href="https://es.wikipedia.org/wiki/Nueva_York#Geograf%C3%ADa">Geografía</a>
+        <a href="https://es.wikipedia.org/wiki/Nueva_York#Geograf%C3%ADa">Geografia</a>
         <a href="https://www.weltrade.com/">Economía</a>
       </nav>
     </header>
@@ -74,9 +74,7 @@ const NewsCard = ({ headline, extract, image, category }) => {
       <Card.Body className="d-flex flex-column text-center px-4">
         <Card.Title className="news-headline">{headline}</Card.Title>
         <Card.Text className="news-extract">{extract}</Card.Text>
-        <Button variant="dark" className="mt-auto vintage-btn rounded-0 w-100">
-          LEER MÁS
-        </Button>
+      
       </Card.Body>
     </Card>
   );
