@@ -191,3 +191,24 @@
 .bg-opacity-25 {
   background-color: rgba(0, 0, 0, 0.4) !important;
 }
+
+/*translator*/
+.menu {
+
+#google_translate_element .goog-te-gadget-simple {
+  background-color: transparent !important;
+  border: none !important;
+  font-size: inherit !important;
+  padding: 0 !important;
+  cursor: pointer;
+}
+
+.goog-te-gadget-icon {
+  display: none !important;
+}
+
+.goog-te-menu-value span {
+  color: blue !important; 
+  text-decoration: underline; 
+}
+}

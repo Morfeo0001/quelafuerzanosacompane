@@ -33,6 +33,7 @@ const NewspaperHeader = () => {
         <a href="https://es.wikipedia.org/wiki/Nueva_York#Historia">History</a>
         <a href="https://es.wikipedia.org/wiki/Nueva_York#Geograf%C3%ADa">Geography</a>
         <a href="https://www.weltrade.com/">Economy</a>
+         <li><div id="google_translate_element"></div></li>
       </nav>
     </header>
   );
@@ -155,5 +156,7 @@ const Footer = ({ nombre, clase }) => {
     </footer>
   );
 };
+
+
 
 export default App;
